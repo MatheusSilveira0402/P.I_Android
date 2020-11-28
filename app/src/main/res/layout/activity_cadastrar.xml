@@ -4,62 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cadastrar">
+    tools:context=".Cadastrar"
+
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
 
-
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Cadastrar empressas"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textColor="#000"
 
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Nome da empressa"
+            android:layout_marginTop="5sp"
+            android:textColor="#000"
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/editnome_empressa"
+            android:background="#aaa"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Endereço"
+            android:layout_marginTop="5sp"
+            android:textColor="#000"
+
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/editendereco"
+            android:background="#aaa"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="E-mail"
+            android:layout_marginTop="5sp"
+            android:textColor="#000"
+
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/editmail"
+            android:background="#aaa"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Contato"
+            android:layout_marginTop="5sp"
+            android:textColor="#000"
+
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/editcontato"
+            android:background="#aaa"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Avalição"
+            android:layout_marginTop="5sp"
+            android:textColor="#000"
+
             />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/editavalicao"
+            android:background="#aaa"
+
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="CadastrarEmpressa"
+            android:text="Cadastra empressa"
+            android:textColor="#000"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/Results"
+            android:textColor="#000"
 
             />
 

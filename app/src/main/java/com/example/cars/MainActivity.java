@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
     private void buttonActivity() {
         startActivity(new Intent(MainActivity.this,  Cadastrar.class));
     }
