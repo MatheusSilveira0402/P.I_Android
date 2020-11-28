@@ -93,6 +93,17 @@ public class Empressa {
     public String erro(){
         return "Desculpe não foi possivél realizar sua requisição";
     }
-
-
+    public String erro2(){
+        return "Desculpe ocorreu algum erro, tente novamente.";
+    }
+    public String Cadastradoempressa(){
+        return "\n __________________________________________________________\n"+
+                "\n Nome da empressa: "+ nome_empressa +
+                "\n Endereço:" + endereco +
+                "\n E-mail: " + mail +
+                "\n Contato: " + contato +
+                "\n Avalição: " + avalicao + "\n===============================================\n===============================================" +
+                "\n"
+                ;
+    }
 }

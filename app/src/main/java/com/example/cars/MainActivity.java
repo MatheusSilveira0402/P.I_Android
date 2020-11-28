@@ -1,5 +1,6 @@
 package com.example.cars;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.volley.AuthFailureError;
@@ -19,6 +20,7 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -31,6 +33,8 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     TextView TextResults;
 
+    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +42,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextResults = findViewById(R.id.TextResults);
+        button = findViewById(R.id.button);
 
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                buttonActivity();
+            }
+
+
+        });
+    }
+
+    private void buttonActivity() {
+        startActivity(new Intent(MainActivity.this,  Cadastrar.class));
     }
 
 
@@ -105,34 +123,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void CadastrarEmpressa(View view) {
-        RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://matheus.tech4every1.com.br:8001/empressa/";
-
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url,null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Empressa empress = new Empressa();
-                        TextResults.setText(empress.erro());
-                    }
-                }
-        ) {
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("X-Api-Key", "IvNWyHHb.5FFO3ASU0iGE0CfUqpYwLrcoioUiN0fU");
-
-                return params;
-            }
-        };
-        queue.add(request);
-    }
 }
